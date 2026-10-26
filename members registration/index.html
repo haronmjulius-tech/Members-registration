@@ -1,0 +1,61 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Member Registration</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Member Registration</h1>
+        <button id="dark-mode-btn" type="button">Dark Mode</button>
+      </header>
+
+      <div class="card">
+        <div id="success-message" hidden></div>
+        <form id="member-form" novalidate>
+          <div class="group">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Jane Doe" />
+            <span class="error"></span>
+          </div>
+          <div class="group">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="jane@example.com" />
+            <span class="error"></span>
+          </div>
+          <div class="group">
+            <label for="role">Role</label>
+            <select id="role">
+              <option value="">Select a role…</option>
+              <option>Student</option>
+              <option>Developer</option>
+              <option>Designer</option>
+              <option>Mentor</option>
+            </select>
+            <span class="error"></span>
+          </div>
+          <div class="group">
+            <label for="bio">Bio</label>
+            <textarea
+              id="bio"
+              rows="3"
+              placeholder="Tell us a bit about yourself"
+            ></textarea>
+            <span class="error"></span>
+          </div>
+          <button class="primary" type="submit">Register</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Members (<span id="member-count">0</span>)</h2>
+        <ul id="member-list"></ul>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
